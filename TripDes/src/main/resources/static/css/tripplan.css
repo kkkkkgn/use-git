@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+.navbar {
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+    transform: translateY(-56px);
+    transition: 0.7s;
+    z-index: 999;
+}
+.navbar:hover {
+    transform: translateY(0);
+}
+#navbar-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: none;
+    height: auto;
+    background-color: white;
+    z-index: 99;
+}
+.navbar:hover .arrow-down {
+    opacity: 0 !important;
+    background-image: url();
+    font-size: 0;
+    z-index: -1;
+}
+.arrow-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+.arrow-down {
+    font-style: italic;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 50px;
+    height: 50px; 
+    background-image: url(../img/fast-backward.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* 이미지를 부모 요소에 맞게 조절 */
+    margin: auto;
+    transform:translateY(-50%);
+    transition: 0.5s;
+    animation: bounceUpDown 5s infinite alternate;
+}
+@keyframes bounceUpDown {
+    0%, 100% {
+        transform: translateY(-50%); /* 초기 및 최종 위치 */
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateY(30%); /* 중간 위치에서 위로 이동 */
+        opacity: 0.3;
+    }
+}
+.plan-googlemap-container {
+    position: relative;
+    height: 100%;
+}
+.plan-container {             
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+}
+.step-lists {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(153 151 151 / 10%);
+    box-shadow: 1px 0px 5px rgba(0,0,0,0.3);
+    margin-bottom: 0;
+    padding-left: 1rem;
+}
+.step-list {
+    flex: 2;
+}
+.step-lists li {
+    list-style: none;
+}
+.step-lists li a {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transition-duration: .2s;
+    --tw-text-opacity: 1;
+    color: rbg(80 212 229/var(--tw-text-opacity));
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: .75rem;
+    cursor: pointer;
+    display: block;
+
+}
+.step-lists button {
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 50px;
+    justify-content: center;
+}
+.btn-container {
+    margin-bottom: 1rem;
+}
+#left-plan-container{
+    width: 350px;
+    position: relative;
+    padding-top: 60px;
+    padding: 1rem;
+    overflow-wrap: break-word;
+    flex-direction: column;
+    display: flex;
+    box-shadow: 1px 0 5px rgba(0,0,0,0.3);
+}
+.datepicker-wrapper{
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    width: auto;
+}
+.datepicker__input-container {
+    position: relative;
+    display: inline-block;
+}
+.trvl_day {
+    border: 1px solid rgba(0,0,0,0.1) !important;
+}
+#trvl_time {
+    color:rgb(30, 30, 245);
+}
+#trvl_time_help {
+    font-size: 0.75rem;
+    word-wrap: break-word; 
+    color: rgba(0,0,0,0.75);
+}
+#trvl_tableColumes {
+    width: 100%;
+    text-align: center;
+}
+#trvl_tableColumes thead {
+    opacity: 0.7;
+    background-color: rgba(0,0,0,0.1) !important;
+
+}
+#trvl_tablearea td {
+    padding: 3px;
+    font-weight: 600;
+}
+
+
+/**************************캘린더*************************/ 
+#CalendarTableara {
+	display: none;
+}
+#tablearea td, #tablearea th {
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border: none;
+    font-weight: 400;
+    width: 40px;
+    line-height: 2rem;
+    font-size: 0.9rem;
+    opacity: 1;
+}
+#tablearea th {
+    font-weight: 600;
+}
+#tablearea th:first-child {
+    color: #e53e30;
+}
+#tablearea th:last-child {
+    color: #006f80;
+}
+#tablearea td {
+    cursor: pointer;
+}
+#tablearea td:first-child {
+    color: #e53e30;
+}
+#tablearea td:last-child {
+    color: #006f80;
+}
+.past-day {
+    color: #ccc !important;
+    pointer-events: none !important; /* 클릭 이벤트 비활성화 */
+}
+.hidden {
+    overflow: hidden;
+}
+.none {
+    display: none;
+} 
